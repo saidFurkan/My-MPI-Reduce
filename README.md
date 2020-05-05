@@ -1,4 +1,4 @@
-#Reimplementation of MPI_Reduce
+# Reimplementation of MPI_Reduce
 
 This specific Reduce function has two stages, and at each stage a specific
 communication pattern is used.
@@ -12,7 +12,7 @@ final result (Reduction).
 ![mpi_reduce](https://user-images.githubusercontent.com/37874147/81065845-e7bf8f00-8ee4-11ea-8938-aee2dca9b595.png)
 
 
-##Test Procedure
+## Test Procedure
 ------------------------------------------------------------------------
 Each process is tested both with the function I wrote and with MPI's own function, the results are printed on the screen.
 
@@ -31,7 +31,7 @@ MPI_Reduce SUM : 0
 
 ------------------------------------------------------------------------
 
-##Design Choices
+## Design Choices
 ------------------------------------------------------------------------
 It is designed to work with 16 processors. All processors are divided into 4 groups.
 4 tasks have been defined. Sum, Prod, Max, Min.
@@ -41,9 +41,10 @@ Here, processor 1, the leader of all processors, was chosen.
 After all operations are completed, the results are printed to the console by the 1st processor.
 
 Code was tested in Windows 32bit arthitecture.
+
 ------------------------------------------------------------------------
 
-##How to Run:
+## How to Run:
 ------------------------------------------------------------------------
 Download MS-MPI SDK and Redist installers and install them.
 Setup property of Visual Studio
