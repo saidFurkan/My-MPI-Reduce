@@ -27,44 +27,33 @@ int main(int argc, char* argv[]) {
 	MPI_Barrier(MPI_COMM_WORLD);
 
 
-	//Test Ares
+	//Test
 
 	myMPI_Reduce(&local_value, &return_value, 1, MPI_INT, MPI_SUM, 1, MPI_COMM_WORLD);
-	if (myRank == 1) {
-		cout << "my_MPI_Reduce SUM : " << return_value << endl;
-	}
+	if (myRank == 1) 	cout << "my_MPI_Reduce SUM : " << return_value << endl;
+	
 	myMPI_Reduce(&local_value, &return_value, 1, MPI_INT, MPI_PROD, 1, MPI_COMM_WORLD);
-	if (myRank == 1) {
-		cout << "my_MPI_Reduce PROD : " << return_value << endl;
-	}
+	if (myRank == 1) 	cout << "my_MPI_Reduce PROD : " << return_value << endl;
+	
 	myMPI_Reduce(&local_value, &return_value, 1, MPI_INT, MPI_MAX, 1, MPI_COMM_WORLD);
-	if (myRank == 1) {
-		cout << "my_MPI_Reduce MAX : " << return_value << endl;
-	}
+	if (myRank == 1) 	cout << "my_MPI_Reduce MAX : " << return_value << endl;
+	
 	myMPI_Reduce(&local_value, &return_value, 1, MPI_INT, MPI_MIN, 1, MPI_COMM_WORLD);
-	if (myRank == 1) {
-		cout << "myMPI_Reduce MIN : " << return_value << endl;
-	}
-
-
+	if (myRank == 1) 	cout << "myMPI_Reduce MIN : " << return_value << endl << endl;
+	
 
 
 	MPI_Reduce(&local_value, &return_value, 1, MPI_INT, MPI_SUM, 1, MPI_COMM_WORLD);
-	if (myRank == 1) {
-		cout << "MPI_Reduce SUM : " << return_value << endl;
-	}
+	if (myRank == 1) 	cout << "MPI_Reduce SUM : " << return_value << endl;
+
 	MPI_Reduce(&local_value, &return_value, 1, MPI_INT, MPI_PROD, 1, MPI_COMM_WORLD);
-	if (myRank == 1) {
-		cout << "MPI_Reduce SUM : " << return_value << endl;
-	}
+	if (myRank == 1) 	cout << "MPI_Reduce SUM : " << return_value << endl;
+
 	MPI_Reduce(&local_value, &return_value, 1, MPI_INT, MPI_MAX, 1, MPI_COMM_WORLD);
-	if (myRank == 1) {
-		cout << "MPI_Reduce SUM : " << return_value << endl;
-	}
+	if (myRank == 1)	cout << "MPI_Reduce SUM : " << return_value << endl;
+
 	MPI_Reduce(&local_value, &return_value, 1, MPI_INT, MPI_MIN, 1, MPI_COMM_WORLD);
-	if (myRank == 1) {
-		cout << "MPI_Reduce SUM : " << return_value << endl;
-	}
+	if (myRank == 1) 	cout << "MPI_Reduce SUM : " << return_value << endl;
 
 	
 
