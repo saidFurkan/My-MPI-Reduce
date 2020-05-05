@@ -21,13 +21,21 @@ output :
 mpiexec -n 16 Mpi.exe
 
 my_MPI_Reduce SUM : 120
+
 my_MPI_Reduce PROD : 0
+
 my_MPI_Reduce MAX : 15
+
 myMPI_Reduce MIN : 0
+
 MPI_Reduce SUM : 120
+
 MPI_Reduce SUM : 0
+
 MPI_Reduce SUM : 15
+
 MPI_Reduce SUM : 0
+
 
 ------------------------------------------------------------------------
 
@@ -46,10 +54,10 @@ Code was tested in Windows 32bit arthitecture.
 
 ## How to Run:
 ------------------------------------------------------------------------
-Download MS-MPI SDK and Redist installers and install them.
-Setup property of Visual Studio
-Additional Include directories 	: $(MSMPI_INC);$(MSMPI_INC)\x86
-Additional dependencies 	: add msmpi.lib
-Additional Library Directories 	: $(MSMPI_LIB32)
-Build project in Visual Studio
-Run from the console with "mpiexec -n 16 Mpi.exe" command.
+- Download MS-MPI SDK and Redist installers and install them.
+- Setup property of Visual Studio
+- Additional Include directories 	: $(MSMPI_INC);$(MSMPI_INC)\x86
+- Additional dependencies 	: add msmpi.lib
+- Additional Library Directories 	: $(MSMPI_LIB32)
+- Build project in Visual Studio
+- Run from the console with "mpiexec -n 16 Mpi.exe" command.
